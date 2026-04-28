@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melissa Carreón | Portafolio</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portafolio de Melissa Carreón, diseñadora gráfica especializada en branding, fotomontaje y fotografía.">
+
+    <!-- Tipografía -->
+   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Meli</h1>
+
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#section-reveal">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <!-- VIDEO FONDO -->
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="img/video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- CONTENIDO -->
+    <div class="hero-content">
+        
+        <img src="img/fotito.png" class="hero-img">
+
+        <h2 class="hero-title">Melissa Carreon</h2>
+        <p class="hero-subtitle">Diseñadora grafica en: <br>
+            Branding · Fotomontaje · Ilustracion</p>
+
+    <a href="https://www.behance.net/gallery/246625131/MI-PORTAFOLIO-2026" target="_blank" class="btn-behance">
+    Ver portafolio completo
+</a>
+
+    </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="about" class="about section">
+    <div class="container about-container">
+
+        <h2 class="section-title">Sobre mí</h2>
+
+        <div class="about-text">
+            <p class="highlight">Diseño para construir identidad.</p>
+            <p>Me enfoco en crear marcas con personalidad visual fuerte,
+           mezclando estética, emoción y concepto.</p>
+    
+        </div>
+    </div>
+</section>
+
+
+
+<!-- CATEGORÍAS -->
+<section id="section-reveal" class="section-reveal">
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="projects-art">
+
+        <!-- GRANDE -->
+        <a href="#ilustracion" class="card big">
+            <img src="img/poster.png">
+            <div class="info">
+                <h3>Posters/Editorial</h3>
+                <p>Diseños alternativos</p>
+            </div>
+        </a>
+
+        <!-- PEQUEÑAS -->
+        <a href="#branding" class="card small">
+            <img src="img/avocadobrandboard.jpg">
+            <div class="info">
+                <h3>Branding</h3>
+                 <p>Identidades de marca</p>
+            </div>
+        </a>
+
+        <a href="#fotografia" class="card small">
+            <img src="img/ballet.jpg">
+            <div class="info">
+                <h3>Fotografia</h3>
+                 <p>Retratos</p>
+            </div>
+        </a>
+
+        <a href="#video" class="card small">
+            <img src="img/video.png">
+            <div class="info">
+                <h3>Audiovisual</h3>
+                 <p>Tenica Mix Media</p>
+            </div>
+        </a>
+
+
+    </div>
+</section>
+
+<!-- BRANDING -->
+<section id="branding" class="section reveal">
+    <h2 class="section-title">Branding</h2>
+    <div class="projects-grid">
+        <img src="img/avocado.png">
+        <img src="img/essence.png">
+        <img src="img/dhyana.png">
+        <img src="img/lunajewelry.png">
+        <img src="img/compañitas.png">
+
+
+    </div>
+</section>
+
+<!-- ILUSTRACIÓN -->
+<section id="ilustracion" class="section reveal">
+    <h2 class="section-title">Posters / Ilustracion / Editorial</h2>
+    <div class="projects-grid">
+        <img src="img/poster.png">
+        <img src="img/poster2.jpg">
+        <img src="img/poster3.jpg">
+        <img src="img/meltheartist.jpg">
+        <img src="img/byebye18.jpg">
+        <img src="img/enjambretulipanes.jpg">
+        <img src="img/discoenjambre.jpg">
+        <img src="img/oscuraposesion.jpg">
+        <img src="img/fantasma3.jpg">
+        <img src="img/depresion.jpg">
+    </div>
+</section>
+
+<!-- FOTOGRAFÍA -->
+<section id="fotografia" class="section reveal">
+    <h2 class="section-title">Fotografía</h2>
+    <div class="projects-grid">
+        <img src="img/Zoefoto.jpg">
+        <img src="img/ballet.jpg">
+        <img src="img/melimarzo.jpg">
+        <img src="img/autoretrato.png">
+        <img src="img/Zoe cabina amarilla.jpg">
+        <img src="img/autoretratoflor.png">
+        <img src="img/itzelazul.jpg">
+        <img src="img/IMG_7935.jpg">
+        <img src="img/glam.jpg">
+        <img src="img/pareja.jpg">
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="section reveal">
+    <h2 class="section-title">Video</h2>
+    <div class="projects-grid">
+        <video src="img/video1.mp4" controls></video>
+    </div>
+</section>
+
+<!-- JS -->
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 80){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>
+
+
+</div>
+
+<!-- HABILIDADES -->
+<section id="skills" class="skills section">
+    <div class="container">
+        <h2>Habilidades</h2>
+
+        <div class="skills-container">
+
+            <div>
+                <h3>Áreas</h3>
+                <ul>
+                    <li>Fotomontaje</li>
+                    <li>Branding</li>
+                    <li>Fotografía</li>
+                    <li>Social Media</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Software</h3>
+                <ul>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>Premiere pro</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español</li>
+                    <li>Inglés B2</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contact" class="contact section">
+    <div class="container">
+        <h2>Contacto</h2>
+        <form id="form-contact">
+
+    <div class="input-group">
+        <input type="text" name="from_name" required>
+        <label>Nombre</label>
+    </div>
+
+    <div class="input-group">
+        <input type="email" name="reply_to" required>
+        <label>Correo electrónico</label>
+    </div>
+
+    <div class="input-group">
+        <textarea name="message" rows="4" required></textarea>
+        <label>Mensaje</label>
+    </div>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+    
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Melissa Carreón</p>
+</footer>
+
+<script>
+const elements = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+        }
+    });
+});
+
+
+
+
+
+</script>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email.js"></script>
+
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+</body>
+</html>
